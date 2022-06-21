@@ -1,0 +1,62 @@
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="shortcut icon" href="assets/logo.png" />
+    <title>Satize Filmes</title>
+
+    <!-- O media e onload servem pra fazer a requisição ser assíncrona
+    e o site carregar mais rápido-->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      media="print"
+      onload="this.media='all'; this.onload=null"
+    />
+
+    <link href="assets/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/style.css" rel="stylesheet" />
+
+    <script async src="assets/bootstrap.min.js"></script>
+    <script src="movies.js"></script>
+    <script>
+      getDetailsFromMovieId();
+    </script>
+  </head>
+
+  <body>
+    <nav id="nav" class="navbar bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand accent" href="index.html">
+          <img
+            src="assets/logo.png"
+            alt=""
+            width="45"
+            height="36"
+            class="d-inline-block align-text-center mb-2"
+          />
+          Satize
+        </a>
+
+        <form onsubmit="return searchFor()" class="d-none d-lg-flex">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input
+            id="pesquisa"
+            class="form-control me-2"
+            type="search"
+            placeholder="Pesquisar filme"
+            aria-label="Search"
+          />
+        </form>
+      </div>
+    </nav>
+    <a href=""></a>
+    <!-- <div class="position-static img-loader"></div> -->
+    <div class="container mb-5">
+    </div>
+  </body>
+</html>

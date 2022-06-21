@@ -1,0 +1,212 @@
+/* Cores da marca:
+#B28A4A
+#d0b890
+#eee6d7
+#68512c
+#20190e
+*/
+:root {
+  --core: #d0b890;
+  --emphasis: #b28a4a;
+  --black: #20190e;
+  --gray: hsl(39, 40%, 97%);
+}
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+}
+
+footer {
+  flex: auto;
+}
+
+section {
+  padding: 1.5rem 1rem;
+}
+
+.section-gray {
+  background-color: var(--gray);
+}
+
+h2 {
+  color: var(--black);
+  font-weight: bolder;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.standard-select:focus {
+  box-shadow: 0 0 0 0.1rem var(--core);
+  border-color: var(--core);
+}
+
+.accent {
+  color: var(--core);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: bolder;
+  font-size: xx-large;
+}
+
+.accent:hover {
+  color: var(--emphasis);
+  opacity: 0.9;
+  transform: scale(1.005);
+  transition: 100ms linear;
+}
+
+.cartazes {
+  display: flex;
+
+  justify-content: space-around;
+  padding: 2rem 0;
+}
+.cartazes {
+  @media (min-width: 992px) {
+    justify-content: space-between;
+  }
+}
+
+.img-loader {
+  position: relative;
+  /* padding-top: 50%; */
+  width: 250px;
+  height: 368px;
+}
+
+.clickable {
+  cursor: pointer;
+}
+.img-loader:before {
+  content: " ";
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  width: 60px;
+  height: 60px;
+  border: 3px solid var(--emphasis);
+  border-color: transparent var(--emphasis) transparent var(--emphasis);
+  border-radius: 50%;
+  animation: loader 1s linear infinite;
+}
+.img-loader > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 0.5rem;
+
+  padding-top: 1rem;
+}
+@keyframes loader {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.btn-standard {
+  width: fit-content;
+  color: var(--gray);
+  background-color: var(--black);
+  border-color: var(--black);
+}
+
+.btn-standard:hover {
+  color: var(--core);
+  background-color: black;
+  border-color: black;
+  opacity: 0.9;
+}
+
+.btn-standard:focus {
+  box-shadow: 0 0 0 0.15rem var(--core) !important;
+}
+
+.nomeDoFilme {
+  font-weight: bolder;
+  font-size: x-large;
+  color: var(--black);
+}
+
+.dadosExtras > span {
+  font-weight: bold;
+}
+
+.dadosExtras > div > span {
+  font-weight: bold;
+}
+
+.carousel-indicators > button {
+  background-color: var(--emphasis) !important;
+}
+
+.nomeAvaliador {
+  font-size: x-large;
+  font-weight: bolder;
+  color: var(--black);
+}
+
+.fitContent > * {
+  width: fit-content;
+}
+
+.noticiaTitulo {
+  font-size: large;
+  font-weight: bold;
+}
+
+.littleSpacing > * {
+  margin: 0.25rem;
+}
+
+.nav-item {
+  color: var(--gray);
+  list-style-type: none;
+  break-inside: avoid;
+  break-after: avoid;
+  break-before: avoid;
+  flex-wrap: wrap;
+}
+
+.nav-item > a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav-item > a:hover {
+  color: var(--emphasis);
+  opacity: 0.9;
+  transform: scale(1.005);
+  transition: 100ms linear;
+}
+
+.navItems > * {
+  padding: 0.2rem 0.6rem;
+}
+
+#pesquisa {
+  background-size: 1.2rem;
+  background-image: url('data:image/svg+xml; utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M500.3 443.7l-119.7-119.7c27.22-40.41 40.65-90.9 33.46-144.7C401.8 87.79 326.8 13.32 235.2 1.723C99.01-15.51-15.51 99.01 1.724 235.2c11.6 91.64 86.08 166.7 177.6 178.9c53.8 7.189 104.3-6.236 144.7-33.46l119.7 119.7c15.62 15.62 40.95 15.62 56.57 0C515.9 484.7 515.9 459.3 500.3 443.7zM79.1 208c0-70.58 57.42-128 128-128s128 57.42 128 128c0 70.58-57.42 128-128 128S79.1 278.6 79.1 208z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: 5px 10px;
+  text-indent: 20px;
+}
+
+.movie-listed {
+  background-color: whitesmoke;
+  border: 2px solid  #20190e;
+  border-radius: 1rem;
+  margin-right: 1rem;
+  margin-left: 1rem;
+  padding: 2rem;
+
+}
